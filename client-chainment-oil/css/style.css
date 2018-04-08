@@ -1,0 +1,520 @@
+/*################## JQUERY CUSTOMIZATION ###########*/
+
+/*general*/
+.ui-content {
+    padding: 0;
+}
+
+/*menu button default*/
+.ui-btn {
+	border: none;
+	font-size: 2.2vmax !important;
+}
+
+/*collapsible boxes options*/
+.ui-btn:focus {
+	box-shadow: none !important;
+
+}
+
+/*menu button color when active*/
+.ui-btn-active { 
+	background: none !important; 
+	background-color: #3FB9EB !important;
+}
+
+/*on click collapsible color*/
+.supplier .ui-btn-active {
+	color: #2F3E46 !important; 
+    background: none !important; 
+    background-color: #eee !important;
+	background-image: none !important;
+    text-shadow: none !important; 
+	font-size: inherit;
+}
+
+#bid_button_container .ui-btn-active { 
+    background: #4de84a !important; 
+    background-color: #4de84a !important;
+	background-image: none !important;
+	font-size: inherit;
+}
+
+/*history column button checkbox off color*/
+.ui-checkbox-off:after {
+  background-color: white !important;
+}
+
+/*history column button checkbox on color*/
+.ui-checkbox label.ui-checkbox-on:after{
+  background-color: #3FB9EB !important;
+}
+
+/*############## END JQUERY CUSTOMIZATION ###########*/
+
+/*---------ALL PAGES HEADER--------------*/
+
+.main_header {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+.header_bar {
+    background-color:#3FB9EB !important;
+    width: 100%;
+	height: 8vmax !important;
+	max-height: 80px;
+	border: none;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+.app_title {
+	height: 100%;
+	text-align: center;
+}
+
+#cover {
+	flex-direction: column;
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #3FB9EB;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*---------END ALL PAGES HEADER----------*/
+
+/*----------NAVIGATION MAENU---------------*/
+
+.navigation_menu > ul > li > a{
+	margin: 0;
+	padding-bottom: 1vmax;
+	font-size: 2vmax !important;
+}
+
+.navigation_menu > ul > li{
+	margin: 0;
+	font-size: 2vmax !important;
+	border-bottom: 1px solid silver;
+}
+
+/*---------GLOBAL----------*/
+
+.hide {
+	display: none !important;
+}
+
+#global {
+	height: 100%;
+}
+
+.global_top_title{
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	text-align: center;
+	background-color: #e9e9e9;
+	border-left: 1px solid silver;
+	border-bottom: 1px solid silver;
+}
+
+.global_top_title > h5 {
+	padding: 0;
+	margin: 0;
+	font-size: 2.2vmax;
+}
+
+.supplier_container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: auto;
+}
+
+.supplier {
+	width: 100%;
+	border-bottom: 1px solid silver;
+}
+
+.supplier_logo_container {
+    margin: 0;
+    padding: 0;
+	text-align: center;
+}
+
+.supplier_logo {
+    width: inherit;
+	text-align: center;
+	padding-top: 8%;
+	width: inherit;
+}
+
+.price_container {
+	width: 100%;
+    margin: 0;
+	padding: 0;
+}
+
+.price_container .price {
+	width: inherit;
+	text-align: center;
+}
+
+.price > p {
+	margin: 0;
+    font-size: 3.5vmax;
+	padding: 0;
+}
+	
+.trend_container {
+	width: inherit;
+	text-align: center;
+}
+
+.trend {
+	margin-left: 24%;
+}
+
+.trend_arrow {
+    margin: 0;
+	padding: 0;
+	padding-left: 1vmax;
+}
+
+.trend > p {
+	margin: 0;
+	font-size: 2.2vmax;
+}
+
+.trend_arrow > p {
+	margin: 0;
+	font-size: 2.2vmax;
+}
+
+.green {
+	color: rgba(84, 239, 42, 1)
+}
+
+.red {
+	color: rgba(255, 0 , 0, 1);
+}
+
+.supplier_orders {
+	width: inherit;
+    text-align: center;
+}
+
+.supplier_orders > p {
+    font-size: 1.8vmax;
+    margin: 0;
+    padding: 0;
+}
+
+.supplier_history {
+    padding: 0;
+    margin: 0;
+	width: 100%;
+    font-size: 1.9vmax;
+	column-width: 1px;
+}
+
+.supplier_history > tbody > tr {
+	border: 1px solid silver;
+	border-bottom: none;
+}
+
+.supplier_history > tbody > tr:last-child {
+	border-bottom: 1px solid silver;
+}
+
+.supplier_history > tbody > tr:nth-child(odd) {
+    background: #e9e9e9;
+}
+
+/*---------END GLOBAL-----------*/
+
+/*---------MY FUEL------------------*/
+
+#my_fuel {
+	height: 100%;
+}
+
+.middle_title_bar {
+	background-color:#e9e9e9;
+	width: 100%;
+	text-align: center;
+	border-bottom: 1px solid silver;
+}
+
+.middle_title_bar > div {
+	width: 100% !important;
+}
+
+.middle_title_bar > div > h4 {
+	margin: 0;
+	padding: 0;
+	font-style: italic;
+	font-size: 2.4vmax;
+}
+
+.panel {
+	text-align: center;
+	height: 7vmax;
+	padding: 0;
+	margin: 0;
+}
+
+.collapsible-stat {
+	border-top: 1px solid silver;
+	margin: 0;
+}
+
+.collapsible-stat:last-child {
+	border-bottom: 1px solid silver;
+}
+
+.spec_title{
+	padding: 0;
+	margin: 0;
+	width: 100% !important;
+	text-align: center;
+	border-right: 1px solid silver;
+}
+
+.spec_title > h5 {
+	padding: 1px;
+	background-color:#e9e9e9;
+	margin: 0;
+	font-size: 2.3vmax;
+	border-bottom: 1px solid silver;
+}
+
+.spec_title-right {
+	padding: 0;
+	margin: 0;
+	width: 100% !important;
+	text-align: center;
+	border-right: 1px solid silver;
+}
+
+.spec_title-right > h5 {
+	padding: 1px;
+	background-color:#e9e9e9;
+	margin: 0;
+	font-size: 2.4vmax;
+	border-bottom: 1px solid silver;
+}
+
+.quantity {
+	font-size: 3vmax;
+	border-right: 1px solid silver;
+	border-bottom: 1px solid silver;
+	font-style: oblique;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	
+}
+
+#tank_status {
+	height: 100% !important;
+}
+
+#stock_visualizer {
+	width: 100%;
+	height: 100%;
+	max-height: 500px !important;
+	padding: 0;
+	margin: 0;
+	border-bottom: none;
+	border-left: none;
+}
+
+#stock-chart {
+	width: 100% !important;
+	height: 80% !important;
+	max-width: 270px;
+	max-height: 270px;
+}
+
+#week-visualizer {
+	width: inherit;
+	padding-left: 1%;
+	border-top: 1px solid silver;
+}
+
+#month-visualizer {
+	width: inherit;
+	padding-left: 2%;
+	border-top: 1px solid silver;
+}
+/*---------END MY FUEL--------------*/
+
+/*---------HISTORY--------------*/
+
+#history {
+	height: auto;
+}
+
+#orders_history {
+	width: 100%;
+}
+
+#orders_history > thead > tr > th {
+	border-left: 1px solid silver;
+	padding-right: 1% !important;
+}
+
+#orders_history > thead > tr > th:first-child {
+	border:none;
+}
+
+#orders_history > thead > tr > th {
+	margin: 0;
+	padding: 0;
+	font-size: 2.3vmax;
+    text-align: center !important;
+}
+
+#orders_history > tbody > tr {
+	margin: 0;
+	padding: 0;
+	border: 1px solid silver;
+	font-size: 1.8vmax;
+}
+
+#orders_history > tbody > tr:nth-child(odd) {
+    background: #e9e9e9;
+}
+
+#orders_history > tbody > tr > td {
+	border: 1px solid silver;
+	text-align: center !important;
+}
+
+#orders_history > tbody > tr {
+	border-left: none;
+	border-right: none;
+	text-align: center !important;
+}
+
+#orders_history > tbody > tr > td:first-child {
+	border: none;
+}
+
+#orders_history > tbody > tr > td:last-child {
+	border: none;
+}
+
+/*---------END HISTORY----------*/
+
+/*---------ALL PAGES FOOTER-------------*/
+
+.footer_container {
+    padding: 0;
+    margin: 0;
+    background-color: #3FB9EB !important;
+	border: none;
+	border-top: 1px solid silver;
+    width: 100%;
+	
+}
+
+#bid_button_container {
+	padding: 0;
+    margin: 0;
+	border: none;
+	border-top: 1px solid silver !important;
+	background-color: rgba(84, 239, 42, 1);
+    width: 100%;
+	min-height: 8vmax;
+	max-height: 80px;
+}
+
+#bid_button {
+    margin: 0;
+	padding: 0;
+	position: relative;
+	bottom: -10px;
+    background-color: transparent;
+	height: 100%;
+    width: 100%;
+    color: whitesmoke;
+    text-shadow: .2px .5px black;
+    font-size: 3.5vmax !important;
+}
+
+
+#liters_popup {
+	position: fixed;
+	right: 12%;
+	width: 75%;
+	top: 25%;
+	background-color: #e9e9e9;
+}
+
+#liters_popup > form > div{
+	text-align: center;
+	width: 80%;
+	padding-left: 10%;
+}
+
+#liters_popup > form > div > h3 {
+	margin: 0;
+	margin-top: 5%;
+	font-size: 3.5vmax;
+	font-style: italic;
+}
+
+#input_liters {
+	width: 100% !important;
+	border: 1px solid silver;
+}
+
+input[type="number"] {
+	font-size: 3vmax;
+	min-height: 7vmax;
+}
+
+input[type="submit"] {
+	margin: 2vmax;
+	padding: 4%;
+	font-size: 4vmax;
+}
+
+#myPopupDialog {
+	padding: 0;
+	padding: 1%;
+	text-align: center;
+	background-color: #eee;
+}
+
+#back-btn {
+	border: 1px solid silver;
+	border-radius: 7px;
+	background-color: #333;
+	color: #fff;
+	text-shadow: none;
+}
+
+.confirm-order {
+	
+}
+
+.reject-order {
+	
+}
+
+/*---------END ALL PAGES FOOTER----------*/
+
+#stat-chart-container {
+	width: 100%;
+}

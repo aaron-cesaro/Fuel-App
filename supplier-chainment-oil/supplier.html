@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Include meta tag to ensure proper rendering and touch zooming -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Include jQuery Mobile stylesheets -->
+    <link rel="stylesheet" href="jquery/jquery.mobile-1.4.5.css">
+    <link rel="stylesheet" type="text/css"  href="css/style.css">
+
+	<!-- include pusher library -->
+	
+	
+    <!-- Include the jQuery library -->
+
+  	
+	
+
+    <title>FUEL APP</title>
+    <!-- long tap on supplier -->
+    <!-- button highligthing fix -->    
+
+</head>
+<body>
+<!-- GLOBAL PAGE -->
+<div id="cover">
+	<img src="src/img/chainment.png">
+	<svg id="loader" xmlns="http://www.w3.org/2000/svg" viewBox="-118 404 150 150" height="150" width="150"><style>.st0, .st1 { fill:#ffffff; -webkit-animation-name: pulse; -webkit-animation-duration: 2s; -webkit-animation-iteration-count: infinite; -webkit-animation-direction: alternate; -webkit-animation-timing-function: ease-out; animation-name: pulse; animation-duration: 2s; animation-iteration-count: infinite; animation-direction: normal; animation-timing-function: ease-out; transform-origin: center; } .st1 { opacity:0; -webkit-animation-delay: 1s; animation-delay: 1s; } @-webkit-keyframes pulse { 0% {opacity:1; transform: scale(0);} 100% {opacity:0; transform: scale(1);} } @keyframes pulse { 0% {opacity:1; transform: scale(0);} 100% {opacity:0; transform: scale(1);} }</style><path class="st0" d="M-43 431.5c-26.2 0-47.5 21.3-47.5 47.5s21.3 47.5 47.5 47.5S4.5 505.2 4.5 479s-21.3-47.5-47.5-47.5zm0 85.7c-21.1 0-38.2-17.1-38.2-38.2s17.1-38.2 38.2-38.2S-4.8 457.9-4.8 479s-17.1 38.2-38.2 38.2z"/><path class="st1" d="M-43 431.5c-26.2 0-47.5 21.3-47.5 47.5s21.3 47.5 47.5 47.5S4.5 505.2 4.5 479s-21.3-47.5-47.5-47.5zm0 85.7c-21.1 0-38.2-17.1-38.2-38.2s17.1-38.2 38.2-38.2S-4.8 457.9-4.8 479s-17.1 38.2-38.2 38.2z"/></svg>
+</div>
+	
+<div class="hide">
+	
+<div data-role="page" id="global" data-scroll="true">
+    <!-- GLOBAL HEADER -->
+    <div data-role="header" data-position="fixed" class="main_header" data-tap-toggle="false">
+        <div class="header_bar">
+            <img src="src/img/chainment.png" class="app_title">
+        </div>
+        <!-- GLOBAL NAVIGATION -->
+        <div data-role="navbar" class="navigation_menu" >
+            <ul>
+                <li>
+                    <a href="#" data-icon="home" data-transition="none" class="ui-btn-active ui-state-persist">Global</a>
+                </li>
+                <li>
+                    <a href="#history" data-icon="search" data-transition="none">History</a>
+                </li>
+            </ul>
+        </div>
+        <!-- TOP GLOBAL MENU -->
+        <div class="ui-grid-b">
+            <div class="ui-block-a global_top_title">
+                <h5>Client</h5>
+            </div>
+            <div class="ui-block-b global_top_title">
+                <h5>Price/Trend</h5>
+            </div>
+            <div class="ui-block-c global_top_title">
+                <h5>Orders</h5>
+            </div>
+        </div>
+
+    </div>
+    <!-- GLOBAL MAIN CONTENT -->
+    <div data-role="main" class="ui-content" id="main_page">
+        <!-- COLLAPSIBLE CONTAINERS GOES HERE -->
+    </div>
+    <!-- GLOBAL FOOTER -->
+    <div data-role="footer" class="footer_container" data-position="fixed">
+		
+		<!-- CONFIRMATION POPUP-->
+		<a href="#order-popup" style="display:none" id="confirm-hide-btn" data-rel="popup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline"></a>
+		<div data-role="popup" id="order-popup" data-overlay-theme="b" class="ui-content">
+		
+		
+			<div class="ui-body ui-body-a">
+				<h3>Order Confirmation</h3>
+				<p id="confirmation-text"></p>
+				<div data-role="fieldcontain" class="ui-field-contain ui-body ui-br">
+					<label for="name-a" class="ui-input-text confirm-popup-text">comments</label>
+					<input type="text" name="name" id="name-b" value="" class="ui-input-text ui-body-a ui-corner-all ui-shadow-inset">
+				</div>
+						
+			<div data-role="fieldcontain" id="ship-choice-container" class="ui-field-contain ui-body ui-br">
+				<label for="select-choice-a" class="select ui-select confirm-popup-text">Choose shipping method</label>
+				<div class="ui-select">
+					<div data-corners="true" id="ship-choice" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-icon="arrow-d" data-iconpos="right" data-theme="a" class="ui-btn ui-shadow ui-btn-corner-all ui-btn-up-a">
+						<select name="select-choice-a" id="select-choice-a">
+							<option value="standard">Entro 2 ore</option>
+							<option value="rush">Entro ora di pranzo</option>
+							<option value="express">Pomeriggio</option>
+							<option value="overnight">Domani mattina</option>
+						</select>
+					</div>
+				</div>
+			</div>
+				<div id="confirm-order-buttons-container">
+					<a href="#" id="confirmation-btn" class="confirm-order-button ui-btn ui-btn-inline ui-icon-check ui-btn-icon-left" data-rel="back">Confirm</a>
+					<a href="#" id="reject-btn" class="confirm-order-button ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-left" data-rel="back">Reject</a>
+				</div>
+		</div>
+			
+		
+		</div>
+    </div>
+    <!-- SETTINGS POPUP -->
+	<div data-role="panel" id="right-panel" data-position="right" data-display="overlay" data-theme="a">
+		<!-- SUPPLIER PANEL IMAGE -->
+		<img id="client-panel-img" src="">
+		
+		<div class="request-liters">
+			<h3 class="settings-title">Request</h3>
+			<input onkeydown="return false;" type="text" id="req-quantity" name="request-quantity" class="form-control input-number" value="0" min="0.001" max="3.000" readonly>
+		</div>
+		
+		<h2 class="settings-title">Price</h2>
+		
+           <div class="col-lg-2">
+           	<div class="input-group">
+               	<span class="input-group-btn">
+                   	<button type="button" class="price-quantity-up-plus btn btn-danger btn-number"  data-type="minus" data-field="">
+                       	<span class="glyphicon glyphicon-minus">+</span>
+                       </button>
+                </span>
+                <input onkeydown="return false;" type="text" id="price-quantity" name="quantity" class="form-control input-number" value="" min="0.001" max="3.000" readonly>
+                <span class="input-group-btn">
+                  	<button type="button" class="price-quantity-down-minus btn btn-success btn-number" data-type="plus" data-field="">
+						<span class="glyphicon glyphicon-plus">-</span>
+                    </button>
+                </span>
+            </div>
+           </div>
+			
+			<h2 class="settings-title">Trend</h2>
+			
+			<div class="col-lg-2">
+            	<div class="input-group">
+                	<span class="input-group-btn">
+                    	<button type="button" class="trend-quantity-up-plus btn btn-danger btn-number"  data-type="minus" data-field="">
+                        	<span class="glyphicon glyphicon-minus">+</span>
+                        </button>
+                    </span>
+                    <input onkeydown="return false;" type="text" id="trend-quantity" name="quantity" class="form-control input-number" value="" min="-0.999" max="3" readonly>
+                    	<span class="input-group-btn">
+                        	<button type="button" class="trend-quantity-down-minus btn btn-success btn-number" data-type="plus" data-field="">
+                        		<span class="glyphicon glyphicon-plus">-</span>
+                            </button>
+                        </span>
+                </div>
+             </div>
+			<!-- CHANGE PRICE CONFIRM BUTTON-->
+			<button type="button" id="confirm-button" onclick="changeClientPriceTrend()">Confirm</button>
+			
+			<div data-role="footer" data-position="fixed" class="client-timer" id="">				
+			</div>
+			
+			
+        </div>
+	</div>
+
+	
+<!-- HISTORY PAGE -->
+<div data-role="page" id="history">
+    <!-- HISTORY HEADER -->
+    <div data-role="header" data-position="fixed" class="main_header">
+        <div class="header_bar">
+            <img src="src/img/chainment.png" class="app_title">
+        </div>
+        <!-- HISTORY NAVIGATION -->
+        <div data-role="navbar" class="navigation_menu" >
+            <ul>
+                <li>
+                    <a href="#global" data-icon="home" data-transition="none">Global</a>
+                </li>
+                <li>
+                    <a href="#" data-icon="search" data-transition="none" class="ui-btn-active ui-state-persist">History</a>
+                </li>
+            </ul>
+        </div>
+        <!-- HISTORY TOP TITLE -->
+        <div class="ui-grid-b title_bar">
+            <div class="ui-block-a">
+                <h4>Total history</h4>
+            </div>
+        </div>
+    </div>
+    <!-- HISTORY MAIN CONTENT -->
+    <div data-role="main" id="main_page_history" class="ui-content">
+        <!-- ORDERS HISTORY -->
+        <table data-role="table" data-mode="columntoggle" class="ui-responsive" id="orders_history">
+
+        </table>
+    </div>
+    <!-- HISTORY FOOTER -->
+    <div data-role="footer" class="footer_container" data-position="fixed">
+    </div>
+</div>
+	
+</div>
+	
+	
+	<script src="jquery/jquery.min.js"></script>
+	<script src="jquery/jquery.touchSwipe.min.js"></script>
+	<script src="https://js.pusher.com/4.1/pusher.min.js"></script>
+	<script src="js/script.js"></script>
+
+	
+	
+</body>
+</html>

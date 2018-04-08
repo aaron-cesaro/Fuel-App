@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Include meta tag to ensure proper rendering and touch zooming -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Include jQuery Mobile stylesheets -->
+    <link rel="stylesheet" href="jquery/jquery.mobile-1.4.5.css">
+    <link rel="stylesheet" type="text/css"  href="css/style.css">
+    <title>FUEL APP</title>
+    <!-- long tap on supplier -->
+    <!-- button highligthing fix -->
+    
+
+</head>
+<body>
+<div id="cover">
+    <img src="src/img/chainment.png">
+    <svg id="loader" xmlns="http://www.w3.org/2000/svg" viewBox="-118 404 150 150" height="150" width="150"><style>.st0, .st1 { fill:#ffffff; -webkit-animation-name: pulse; -webkit-animation-duration: 2s; -webkit-animation-iteration-count: infinite; -webkit-animation-direction: alternate; -webkit-animation-timing-function: ease-out; animation-name: pulse; animation-duration: 2s; animation-iteration-count: infinite; animation-direction: normal; animation-timing-function: ease-out; transform-origin: center; } .st1 { opacity:0; -webkit-animation-delay: 1s; animation-delay: 1s; } @-webkit-keyframes pulse { 0% {opacity:1; transform: scale(0);} 100% {opacity:0; transform: scale(1);} } @keyframes pulse { 0% {opacity:1; transform: scale(0);} 100% {opacity:0; transform: scale(1);} }</style><path class="st0" d="M-43 431.5c-26.2 0-47.5 21.3-47.5 47.5s21.3 47.5 47.5 47.5S4.5 505.2 4.5 479s-21.3-47.5-47.5-47.5zm0 85.7c-21.1 0-38.2-17.1-38.2-38.2s17.1-38.2 38.2-38.2S-4.8 457.9-4.8 479s-17.1 38.2-38.2 38.2z"/><path class="st1" d="M-43 431.5c-26.2 0-47.5 21.3-47.5 47.5s21.3 47.5 47.5 47.5S4.5 505.2 4.5 479s-21.3-47.5-47.5-47.5zm0 85.7c-21.1 0-38.2-17.1-38.2-38.2s17.1-38.2 38.2-38.2S-4.8 457.9-4.8 479s-17.1 38.2-38.2 38.2z"/></svg>
+</div>
+
+<div class="hide"> <!-- HIDE -->
+
+<!-- GLOBAL PAGE -->
+<div data-role="page" id="global" data-scroll="true">
+    <!-- GLOBAL HEADER -->
+    <div data-role="header" data-position="fixed" class="main_header" data-tap-toggle="false">
+        <div class="header_bar">
+            <img src="src/img/chainment.png" class="app_title">
+        </div>
+        <!-- GLOBAL NAVIGATION -->
+        <div data-role="navbar" class="navigation_menu">
+            <ul>
+                <li>
+                    <a href="#" data-icon="home" data-transition="none" class="ui-btn-active ui-state-persist">Global</a>
+                </li>
+                <li>
+                    <a href="#my_fuel" data-icon="grid" data-transition="none">MyFuel</a>
+                </li>
+                <li>
+                    <a href="#history" data-icon="search" data-transition="none">History</a>
+                </li>
+            </ul>
+        </div>
+        <!-- TOP GLOBAL MENU -->
+        <div class="ui-grid-b">
+            <div class="ui-block-a global_top_title">
+                <h5>Supplier</h5>
+            </div>
+            <div class="ui-block-b global_top_title">
+                <h5>Price/Trend</h5>
+            </div>
+            <div class="ui-block-c global_top_title">
+                <h5>Orders</h5>
+            </div>
+        </div>
+
+    </div>
+    <!-- GLOBAL MAIN CONTENT -->
+    <div data-role="main" class="ui-content" id="main_page">
+        <!-- COLLAPSIBLE CONTAINERS GOES HERE -->
+    </div>
+    <!-- GLOBAL FOOTER -->
+    <div data-role="footer" id="bid_button_container" data-position="fixed">
+        <!-- START BID BUTTON -->
+        <a href="#liters_popup" data-rel="popup" class="ui-btn" id="bid_button" onclick="createLiterPopUp()">Start bid</a>
+        <!-- LITERS POPUP -->
+        <div data-role="popup" id="liters_popup" class="ui-content">
+        </div>
+    </div>
+    
+	
+</div>
+<!-- MY FUEL PAGE -->
+<div data-role="page" id="my_fuel" data-scroll="true" class="hide">
+    <!-- MY FUEL HEADER -->
+    <div data-role="header" data-position="fixed" class="main_header" data-tap-toggle="false">
+        <div class="header_bar" data-tap-toggle="false">
+            <img src="src/img/chainment.png" class="app_title">
+        </div>
+        <!-- MY FUEL NAVIGATION -->
+        <div data-role="navbar" class="navigation_menu" >
+            <ul>
+                <li>
+                    <a href="#global" data-icon="home" data-transition="none">Global</a>
+                </li>
+                <li>
+                    <a href="#" data-icon="grid" data-transition="none" class="ui-btn-active ui-state-persist">MyFuel</a>
+                </li>
+                <li>
+                    <a href="#history" data-icon="search" data-transition="none">History</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- MY FUEL MAIN CONTENT -->
+    <div data-role="main" class="ui-content">
+        <!-- TOP TITLE BAR -->
+        <div class="ui-grid-b middle_title_bar">
+            <div class="ui-block-a">
+                <h4>Stock</h4>
+            </div>
+        </div>
+        <!-- STOCK PANELS -->
+        <div class="ui-grid-b" id="stock_panel">
+            <!-- REMAINING PANEL -->
+            <div class="ui-block-a panel">
+                <div class="ui-grid-b">
+                    <div class="ui-block-a spec_title">
+                        <h5>Remaining</h5>
+                    </div>
+                </div>
+                <p class="quantity">2.000 lit. </p>
+            </div>
+            <!-- CAPACITY PANEL -->
+            <div class="ui-block-a panel">
+                <div class="ui-grid-b">
+                    <div class="ui-block-a spec_title">
+                        <h5>Capacity</h5>
+                    </div>
+                </div>
+                <p class="quantity">4.500 lit. </p>
+            </div>
+            <!-- USAGE PANEL -->
+            <div class="ui-block-a panel">
+                <div class="ui-grid-b">
+                    <div class="ui-block-a spec_title">
+                        <h5>Daily usage</h5>
+                    </div>
+                </div>
+                <p class="quantity">900 lit.</p>
+            </div>
+            <div class="ui-grid-b">
+                <div id="stock_visualizer">
+                    <canvas id="stock-chart" width="100%" height="80%"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- WEEK COLLAPSIBLE STAT-->
+        <div data-role="collapsible" class="collapsible-stat">
+            <h4>Week Statistics</h4>
+                <div class="ui-grid-b">
+                    <div class="ui-block-a panel">
+                        <div class="ui-grid-b">
+                            <div class="ui-block-a spec_title">
+                                <h5>Av. cost</h5>
+                            </div>
+                        </div>
+                        <p class="quantity">2.500€</p>
+                    </div>
+                    <div class="ui-block-b panel">
+                        <div class="ui-grid-b">
+                            <div class="ui-block-a spec_title">
+                                <h5>Av. liters</h5>
+                            </div>
+                        </div>
+                        <p class="quantity">2.400</p>
+                    </div>
+
+                    <div class="ui-block-b">
+                        <div class="ui-grid-b">
+                            <div class="ui-block-a spec_title-right">
+                                <h5>Av. usage</h5>
+                            </div>
+                        </div>
+                        <p class="quantity">876 lit.</p>
+                    </div>
+
+                </div>
+
+
+                <div id="week-visualizer">
+                    <canvas id="week-chart" width="100%" height="50%"></canvas>
+                </div>
+        </div>
+        <!-- MONTH COLLAPSIBLE STAT-->
+        <div data-role="collapsible" class="collapsible-stat">
+            <h4>Month Statistics</h4>
+                <div class="ui-grid-b">
+                    
+                    <!-- MONTH STAT-->
+                    <div class="ui-block-a panel">
+                        <div class="ui-grid-b">
+                            <div class="ui-block-a spec_title">
+                                <h5>Av. cost</h5>
+                            </div>
+                        </div>
+                        <p class="quantity">11.000€</p>
+                    </div>
+
+                    <div class="ui-block-b panel">
+                        <div class="ui-grid-b">
+                            <div class="ui-block-a spec_title">
+                                <h5>Av. liters</h5>
+                            </div>
+                        </div>
+                        <p class="quantity">10.000</p>
+                    </div>
+
+                    <div class="ui-block-b">
+                        <div class="ui-grid-b">
+                            <div class="ui-block-a spec_title">
+                                <h5>Av. usage</h5>
+                            </div>
+                        </div>
+                        <p class="quantity">811 lit.</p>
+                    </div>
+
+                </div>
+                <div id="month-visualizer">
+                    <canvas id="month-chart" width="100%" height="50%"></canvas>
+                </div>
+        </div>
+
+    </div>
+    <!-- MY FUEL FOOTER -->
+    <div data-role="footer" class="footer_container" data-position="fixed">
+    </div>
+</div>
+<!-- HISTORY PAGE -->
+<div data-role="page" id="history" class="hide">
+    <!-- HISTORY HEADER -->
+    <div data-role="header" data-position="fixed" class="main_header">
+        <div class="header_bar">
+            <img src="src/img/chainment.png" class="app_title">
+        </div>
+        <!-- HISTORY NAVIGATION -->
+        <div data-role="navbar" class="navigation_menu" >
+            <ul>
+                <li>
+                    <a href="#global" data-icon="home" data-transition="none">Global</a>
+                </li>
+                <li>
+                    <a href="#my_fuel" data-icon="grid" data-transition="none">MyFuel</a>
+                </li>
+                <li>
+                    <a href="#" data-icon="search" data-transition="none" class="ui-btn-active ui-state-persist">History</a>
+                </li>
+            </ul>
+        </div>
+        <!-- HISTORY TOP TITLE -->
+        <div class="ui-grid-b middle_title_bar">
+            <div class="ui-block-a">
+                <h4>Total history</h4>
+            </div>
+        </div>
+    </div>
+    <!-- HISTORY MAIN CONTENT -->
+    <div data-role="main" id="main_page_history" class="ui-content">
+        <!-- ORDERS HISTORY -->
+        <table data-role="table" data-mode="columntoggle" class="ui-responsive" id="orders_history">
+
+        </table>
+    </div>
+    <!-- HISTORY FOOTER -->
+    <div data-role="footer" class="footer_container" data-position="fixed">
+    </div>
+</div>
+
+</div> <!-- HIDE-->
+    <script src="charts/Chart.bundle.min.js" language="JavaScript"></script>
+
+    <!-- Include jQuery library -->  
+    <script src="jquery/jquery.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!-- Include jQuery touchSwipe -->  
+    <script src="jquery/jquery.touchSwipe.min.js"></script>
+    <!-- include pusher library -->
+    <script src="https://js.pusher.com/4.1/pusher.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
